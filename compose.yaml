@@ -1,0 +1,15 @@
+services:
+  htmlgen:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:3000
+    volumes:
+      - htmlvol:/home/html
+    environment:
+      LIVEKIT_API_KEY:
+      LIVEKIT_API_SECRET:
+      DEEPGRAM_API_SECRET:
+volumes:
+  htmlvol:

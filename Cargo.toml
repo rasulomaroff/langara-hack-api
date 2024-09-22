@@ -1,0 +1,35 @@
+[package]
+name = "htmlgen"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7"
+
+# serde / json
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_with = "2"
+
+# voice-to-voice api
+livekit-api = "0.2.0"
+
+# tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+tokio = { version = "1.39.2", features = ["macros", "rt-multi-thread"] }
+tower-http = { version = "0.5", features = ["fs", "cors"] }
+tower-cookies = "0.10"
+
+lazy-regex = "3"
+async-trait = "0.1"
+strum_macros = "0.26"
+uuid = { version = "1", features = ["v4", "fast-rng"] }
+reqwest = "0.12.7"
+anyhow="1"
+
+[dev-dependencies]
+httpc-test="0.1"
